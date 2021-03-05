@@ -24,4 +24,9 @@ Wir erstellen als erstes ein Lokales GIT Repository:
 2. Auf dem Ordner wechseln: `cd Repository`
 3. Das Repository initialisieren: `git init`
 
-
+#### Remote GIT Repository erstellen
+Wenn aber schon ein Repository existiert, aber diese nicht lokal befindet, kann man einen Remote zu diesem Repository erstellen:
+1. Man sollte zuerst ein Ordner erstellen, auf der die Repository gespeichert werden soll: `mkdir Repository`
+2. Auf dem Ordner wechseln: `cd Repository`
+2. Man benötigt von einem existierenden Repository ein SSH-PublicKey. 
+3. Wenn man diesen SSH-PublicKey hat gibt man folgenden Befehl ein: `git clone "SSH-PublicKey LINK"`
