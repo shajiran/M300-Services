@@ -16,3 +16,12 @@ Folgende Befehle müssen erfolgen, damit die Konfiguration zu speichern:
 `git config --global user.name "Shajiran"`
 
 `git config --global user.email shajiran.raveendran@edu.tbz.ch`
+
+### GIT Repository erstellen
+#### Lokales GIT Repository erstellen
+Wir erstellen als erstes ein Lokales GIT Repository:
+1. Man sollte zuerst ein Ordner erstellen, auf der die Repository gespeichert werden soll: `mkdir Repository`
+2. Auf dem Ordner wechseln: `cd Repository`
+3. Das Repository initialisieren: `git init`
+
+
