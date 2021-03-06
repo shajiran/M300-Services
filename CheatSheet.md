@@ -4,7 +4,7 @@ Raveendran Shajiran
 
 ## Einleitung
 Dieses CheatSheet dient als eine Dokumentation für das **Modul 300** ***Plattformübergreifende Dienste im Netzwerk integrieren.***
-Hier findet man wichtige Befehle und eine passende Anleitung.
+Wir werden meist GitBash verwenden und dazu findet man hier wichtige Befehle und eine passende Anleitung. Dieses Dokument ist für Github gedacht.
 
 
 ## GIT Repository einrichten
@@ -21,12 +21,27 @@ Folgende Befehle müssen erfolgen, damit die Konfiguration zu speichern:
 #### Lokales GIT Repository erstellen
 Wir erstellen als erstes ein Lokales GIT Repository:
 1. Man sollte zuerst ein Ordner erstellen, auf der die Repository gespeichert werden soll: `mkdir Repository`
-2. Auf dem Ordner wechseln: `cd Repository`
+2. Auf dem Ordner wechseln: `cd Repository/`
 3. Das Repository initialisieren: `git init`
 
 #### Remote GIT Repository erstellen
 Wenn aber schon ein Repository existiert, aber diese nicht lokal befindet, kann man einen Remote zu diesem Repository erstellen:
 1. Man sollte zuerst ein Ordner erstellen, auf der die Repository gespeichert werden soll: `mkdir Repository`
-2. Auf dem Ordner wechseln: `cd Repository`
+2. Auf dem Ordner wechseln: `cd Repository/`
 2. Man benötigt von einem existierenden Repository ein SSH-PublicKey. 
 3. Wenn man diesen SSH-PublicKey hat gibt man folgenden Befehl ein: `git clone "SSH-PublicKey LINK"`
+
+
+### Repository aktualisieren & herunterladen
+#### Repository aktualisieren (push)
+Wenn man nun eine Datei geändert, hinzugefügt oder gelöscht hat, muss man die Änderungen am Repository übertragen. Dabei muss man folgend vorgehen:
+1. Zuerst geht man auf das entsprechende Verzeichnis des Repository: `cd Repository/`
+2. Man sollte überprüfen, ob Dateien auch geändert sind: `git status`
+3. Die Dateien dann dem Upload hinzufügen: `git add -A`
+4. Diesen Upload mit einem Message commiten: `git commit -m "Mein Kommentar"`
+5. Und schliesslich den Upload pushen: `git push`
+
+#### Repository herunterladen (pull)
+Wenn nun Dateien im Repository geändert, hinzugefügt oder gelöscht wurden, sollte man diese zuerst auf dem Lokalen Rechner holen, bevor man weiterarbeitet. Dabei muss man folgend vorgehen:
+1. Zuerst geht man auf das entsprechende Verzeichnis des Repository: `cd Repository/`
+2. Die Dateien herunterladen: `git pull`
