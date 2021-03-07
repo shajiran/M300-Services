@@ -64,3 +64,20 @@ Wie schon vorhin erwähnt kann man einen Branch für Testzwecken nutzen. Wenn nu
 2. Den Test-Branch mit dem Main-Branch mergen: `git merge <Test-Branch>`
 
 Dies ist sehr nützlich, wenn man z.B. an einer Testdatei arbeitet und man ausversehen einen Fehler eingebaut hat, kann man auf den letzt erfolgreichten Test zurückgreifen, welcher sicher auf der **Main-Branch** liegt. Verwenden oft Programmierer. 
+
+
+## Quellenangaben
+### Ressourcen
+Um **detailierte** Informationen zu holen, stehen folgende Links zur Verfügung:
+- [GIT Repository einrichten](https://gitlab.com/mbe99/m300-git/-/tree/master)
+- [Branch Nutzung](https://git-scm.com/book/de/v2/Git-Branching-Einfaches-Branching-und-Merging)
+- [Markdown Formating](https://guides.github.com/features/mastering-markdown/)
+
+
+### Sonstige
+Um **weitere** Informationen zu holen, stehen folgende Links zur Verfügung:
+- [Unterlagen zu Modul 300](https://github.com/mc-b/M300)
+- [10-Toolumgebung](https://github.com/mc-b/M300/tree/master/10-Toolumgebung)
+- [20-Infrastruktur](https://github.com/mc-b/M300/tree/master/20-Infrastruktur)
+- [25-Sicherheit](https://github.com/mc-b/M300/tree/master/25-Sicherheit)
+ 
