@@ -4,7 +4,7 @@ Raveendran Shajiran
 
 ## Einleitung
 Dieses CheatSheet dient als eine Dokumentation für das **Modul 300** ***Plattformübergreifende Dienste im Netzwerk integrieren.***
-Wir werden meist GitBash verwenden und dazu findet man hier wichtige Befehle und eine passende Anleitung. Dieses Dokument ist für Github gedacht.
+Wir werden GitBash verwenden und dazu findet man hier wichtige Befehle und passende Anleitungen. Dieses Dokument ist für Github gedacht.
 
 
 ## GIT Repository einrichten
@@ -45,3 +45,15 @@ Wenn man nun eine Datei geändert, hinzugefügt oder gelöscht hat, muss man die
 Wenn nun Dateien im Repository geändert, hinzugefügt oder gelöscht wurden, sollte man diese zuerst auf dem Lokalen Rechner holen, bevor man weiterarbeitet. Dabei muss man folgend vorgehen:
 1. Zuerst geht man auf das entsprechende Verzeichnis des Repository: `cd Repository/`
 2. Die Dateien herunterladen: `git pull`
+
+
+### Branch
+Ein Branch ist in prinzip ein Arbeitsverzeichnis, in der wir unsere Dateien abspeichern. Neue Commits werden als Historie im Branch festgehalten. Nachdem man eine Repository erstellt hat, wird automatisch ein **main** Branch erstellt. Man kann weitere Branches erstellen, die z.B. für Testzwecken benutzt werden. 
+
+#### Branch erstellen & löschen
+Folgende Befehle helfen das Bedienen der Branches.
+1. Listet alle Branches im Repository auf: `git branch`
+2. Erzeugt einen neuen Branch: `git branch <Branch-Name>`
+3. Wechselt in ein anderen Branch: `git checkout <Branch-Name>`
+4. Benennt den aktuellen Branch um: `git branch -m <Branch-Name-New>`
+5. Löscht einen Branch: `git branch -D <Branch-Name>`
