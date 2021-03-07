@@ -7,7 +7,7 @@ Dieses CheatSheet dient als eine Dokumentation für das **Modul 300** ***Plattfo
 Wir werden GitBash verwenden und dazu findet man hier wichtige Befehle und passende Anleitungen. Dieses Dokument ist für Github gedacht.
 
 
-## GIT Repository einrichten
+## GIT Repository
 ### Konfigurations Dateien
 Damit GIT weiss welcher User sich authentifiziert hat, geben wir dem GIT unseren Username und die E-Mail Bescheid. Diese Daten müssen in der globalen Konfiguration gespeichert werden. Es dient uns dazu, wer z.B. das letzte File bearbeitet hat, nachdem ein User ein Commit ausgeführt hat. 
 
@@ -57,3 +57,10 @@ Folgende Befehle helfen das Bedienen der Branches.
 3. Wechselt in ein anderen Branch: `git checkout <Branch-Name>`
 4. Benennt den aktuellen Branch um: `git branch -m <Branch-Name-New>`
 5. Löscht einen Branch: `git branch -D <Branch-Name>`
+
+#### Branch mergen
+Wie schon vorhin erwähnt kann man einen Branch für Testzwecken nutzen. Wenn nun eine Testdatei in der **Test-Branch** erfolgreich war, sollte man diesen in den **Main-Branch** mergen. 
+1. Zuerst wechselt man auf den Main-Branch: `git checkout main`
+2. Den Test-Branch mit dem Main-Branch mergen: `git merge <Test-Branch>`
+
+Dies ist sehr nützlich, wenn man z.B. an einer Testdatei arbeitet und man ausversehen einen Fehler eingebaut hat, kann man auf den letzt erfolgreichten Test zurückgreifen, welcher sicher auf der **Main-Branch** liegt. Verwenden oft Programmierer. 
