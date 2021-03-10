@@ -3,23 +3,21 @@
 Raveendran Shajiran
 
 ## Inhaltsverzeichnis
-- [CheatSheet](#cheatsheet)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Einleitung](#einleitung)
-  - [GIT Repository](#git-repository)
-    - [Konfigurations Dateien](#konfigurations-dateien)
-    - [GIT Repository erstellen](#git-repository-erstellen)
-      - [Lokales GIT Repository erstellen](#lokales-git-repository-erstellen)
-      - [Remote GIT Repository erstellen](#remote-git-repository-erstellen)
-    - [Repository aktualisieren & herunterladen](#repository-aktualisieren--herunterladen)
-      - [Repository aktualisieren (push)](#repository-aktualisieren-push)
-      - [Repository herunterladen (pull)](#repository-herunterladen-pull)
-    - [Branch](#branch)
-      - [Branch erstellen & löschen](#branch-erstellen--löschen)
-      - [Branch mergen](#branch-mergen)
-  - [Quellenangaben](#quellenangaben)
-    - [Ressourcen](#ressourcen)
-    - [Sonstige](#sonstige)
+- [Einleitung](#einleitung)
+- [GIT Repository](#git-repository)
+  - [Konfigurations Dateien](#konfigurations-dateien)
+  - [GIT Repository erstellen](#git-repository-erstellen)
+    - [Lokales GIT Repository erstellen](#lokales-git-repository-erstellen)
+    - [Remote GIT Repository erstellen](#remote-git-repository-erstellen)
+  - [Repository aktualisieren & herunterladen](#repository-aktualisieren--herunterladen)
+    - [Repository aktualisieren (push)](#repository-aktualisieren-push)
+    - [Repository herunterladen (pull)](#repository-herunterladen-pull)
+  - [Branch](#branch)
+    - [Branch erstellen & löschen](#branch-erstellen--löschen)
+    - [Branch mergen](#branch-mergen)
+- [Quellenangaben](#quellenangaben)
+  - [Ressourcen](#ressourcen)
+  - [Sonstige](#sonstige)
 
 <a name="Einleitung"></a>
 ## Einleitung
