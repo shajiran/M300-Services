@@ -1,0 +1,12 @@
+            #sudo adduser test
+            #sudo groupadd test
+            #sudo addgroup test test
+
+            #sudo mkdir /samba/test
+            #sudo chown test:test /samba/test
+            #sudo chmod 2770 /samba/test
+
+sudo cp https://raw.githubusercontent.com/shajiran/M300-Shajiran/main/smb.conf /etc/samba/smb.conf
+
+        sudo adduser --diabled-login --shell /bin/flase --home /home/testsuer testuser
+        sudo smbpasswd -d testuser

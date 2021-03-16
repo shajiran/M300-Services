@@ -1,0 +1,72 @@
+#Fileserver - Test
+#########################################
+#Fileversion:   Version 1.2
+#Author:        Raveendran Shajiran
+#Created on:    13.03.2021
+#########################################
+
+#VIRTUAL MACHINE SETTINGS
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/trusty64"
+
+    config.vm.provider "virtualbox" do |vb|
+        vb.name = "Fileserver (Samba)"
+        vb.memory = "2048"
+        vb.cpus = 2
+        vb.gui = true
+    end 
+
+    #config.vm.synced_folder "C:/Users/Shajiran/Desktop/M300-Repository/M300-Shajiran/smb.conf", "/etc/samba/smb.conf",type:"virtualbox"
+    
+    #NETWORK SETTINGS
+    config.vm.network :public_network
+
+    
+    #PORTFORWARD
+    config.vm.network :forwarded_port, guest: 80, host: 8000
+    config.vm.network :forwarded_port, guest: 22, host: 2200, id: "ssh"
+
+    #SAMBA INSTALLATION
+    SCRIPT_INSTALL1 = <<-SCRIPT
+        set -e
+        
+        sudo apt-get -y update
+        sudo apt-get -y upgrade
+        sudo apt-get -y install samba
+
+        sudo cp /etc/samba/smb.conf /etc/samba/smb.conf-backup
+        sudo rm /etc/samba/smb.conf
+        
+    SCRIPT
+
+    config.vm.provision :shell, inline: SCRIPT_INSTALL1
+
+    config.vm.provision "file", 
+        source: "C:/Users/Shajiran/Desktop/M300-Repository/M300-Shajiran/smb.conf", 
+        destination: "/tmp/smb.conf"
+
+    SCRIPT_INSTALL2 = <<-SCRIPT
+        set -e
+    
+        sudo mv /tmp/smb.conf /etc/samba/smb.conf
+
+        sudo mkdir /home/test
+
+        sudo adduser test
+        sudo groupadd test
+        sudo addgroup test test
+
+        sudo smbpasswd -a test
+        sudo smbpasswd -d test
+
+        sudo chown test:test /home/test
+        sudo chmod 2770 /home/test
+
+        sudo /etc/init.d/samba restart
+
+    SCRIPT
+
+    config.vm.provision :shell, inline: SCRIPT_INSTALL2 
+
+
+end
